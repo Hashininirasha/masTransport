@@ -15,6 +15,16 @@
             color: $white;
         }
 
+        .sendRequestButton{
+            font-weight: normal !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $primary;
+            padding-left: 20px;
+            
+        }
+
         .gridActionButton {
             display: flex;
             align-items: center;
@@ -51,4 +61,13 @@
     position: sticky !important;
     right: 0 !important;
     z-index: 1 !important;
+}
+
+.alertbox{
+    position: fixed !important;
+     bottom: 20px !important;
+      right: 20px !important;
+      color: $white !important;
+      background-color: $bgColorSidebar !important;
+
 }
