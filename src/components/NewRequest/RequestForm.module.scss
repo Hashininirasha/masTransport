@@ -16,15 +16,19 @@
         }
 
         .gridActionButton {
-            padding: 5px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: $primary;
+            background-color: $bgColor;
+            padding-left: 20px;
+         
+        
 
             .icon {
-                margin-right: 4px;
+             
                 font-size: 20px;
+                padding-left: 5px;
+                
             }
 
             .text{

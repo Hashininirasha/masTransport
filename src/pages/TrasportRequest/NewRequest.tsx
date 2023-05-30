@@ -25,13 +25,13 @@ const NewRequest = () => {
   }, [allRequests])
 
   const getRequestList = async () => {
-    console.log("A")
+ 
     dispatch(requestActions.getRequestsList())
   }
 
   return (
     <React.Fragment>
-      <AppLayout componentTitle="LMRequestCreation">
+      <AppLayout componentTitle="NewRequest">
        <NewRequests />
 
       </AppLayout>
