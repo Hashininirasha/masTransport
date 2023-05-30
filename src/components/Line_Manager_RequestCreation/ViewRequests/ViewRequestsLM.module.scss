@@ -51,3 +51,14 @@
     z-index: 1 !important;
     
 }
+
+.paginationReq {
+    background-color: $bgColorSidebar !important;
+    color: $white !important;
+    position: sticky !important;
+    bottom: 0 !important;
+    z-index: 1 !important;
+    right: 0 !important;
+    width: 2435px;
+  }
+  
