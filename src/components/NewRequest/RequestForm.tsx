@@ -13,12 +13,7 @@ import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDown
 
 
 const NewRequest = () => {
-  const navigate = useNavigate()
-
-  const handleNewRequest = () => {
-
-    navigate(APP_ROUTES.NEW_REQUEST)
-  }
+ 
   return (
     <section className={style.gridContainer}>
           <div className={style.gridHeader}>

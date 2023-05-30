@@ -31,7 +31,7 @@ const AppLayout: React.FC<{
                <NavLink
                   style={{ textDecoration: 'none' }}
                   className={({ isActive }) => (isActive ? 'layout-row is-active' : 'layout-row')}
-                  to={APP_ROUTES.REQUEST_CREATION}
+                  to={APP_ROUTES.NEW_REQUEST}
                 >
                   <div
                     className={`navBarContent navLink layout-row`}
@@ -41,7 +41,6 @@ const AppLayout: React.FC<{
                
                 </NavLink>
             </aside>
-
             {/* LINE MANAGER */}
             <aside className={'links'}>
                <NavLink
@@ -56,19 +55,10 @@ const AppLayout: React.FC<{
                   </div>
                 </NavLink>
             </aside>
+           
 
             <aside className={'links'}>
-              <NavLink
-                 style={{ textDecoration: 'none' }}
-                 className={({ isActive }) => (isActive ? 'layout-row is-active' : 'layout-row')}
-                 to={APP_ROUTES.LM_REQUEST_CREATION}
-               >
-                 <div
-                   className={`navBarContent navLink layout-row`}
-                 >
-                   <span>Request CreationLM</span>
-                 </div>
-               </NavLink>
+              
            </aside>
           </aside>
           

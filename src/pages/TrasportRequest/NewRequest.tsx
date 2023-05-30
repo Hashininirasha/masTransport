@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { AppLayout } from '../../templates'
+import AppLayout from '../../templates/AppLayout/AppLayoutChild'
 import ViewSummeryLM from "../../components/Line_Manager_RequestCreation/ViewRequests/ViewSummeryLM"
 import ViewRequestsLM from "../../components/Line_Manager_RequestCreation/ViewRequests/ViewRequestsLM"
 import { useDispatch, useSelector } from 'react-redux'
