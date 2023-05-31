@@ -1,19 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Box,
-  Button,
-  IconButton,
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TablePagination,
-  TableRow,
-  Tooltip,
-  Typography
-} from '@mui/material';
+import {Box,Button,IconButton,Paper,Table,TableBody,TableCell,TableContainer,TableHead,TablePagination,TableRow,Tooltip,Typography} from '@mui/material';
 import AddIcon from '@mui/icons-material/Add';
 import { EditOutlined, RemoveRedEyeOutlined, DeleteOutlined } from '@mui/icons-material';
 import Avatar from '@mui/material/Avatar';
@@ -23,13 +9,16 @@ import { StyledTableCell } from '../../../assets/theme/theme';
 import style from './ViewRequestsLM.module.scss';
 import RemoveRedEyeOutlinedIcon from '@mui/icons-material/RemoveRedEyeOutlined';
 import DeleteOutlinedIcon from '@mui/icons-material/DeleteOutlined';
+import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
+import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
+
 
 const ViewRequestsLM = () => {
   const [rows, setRows] = useState([
     {
       id: 1,
       requestId: '12345',
-      requestType: 'Transportation',
+      requestType: 'Adhoc',
       createDate: '2023-05-27',
       status: 'Pending',
       VIPtrip: 'No',
@@ -67,7 +56,87 @@ const ViewRequestsLM = () => {
       // Add more properties as per your requirements
     },
     {
-      id: 1,
+      id: 2,
+      requestId: '12345',
+      requestType: 'Adhoc',
+      createDate: '2023-05-27',
+      status: 'Pending',
+      VIPtrip: 'No',
+      From: 'Biyagama',
+      To : 'Pallekele',
+      Departure: '20/04/2023 8.00 AM',
+      Return : '22/04/2023 8.00 PM',
+      Passengers: [
+        {
+          id: 1,
+          name: 'Remy Sharp',
+          avatarSrc: 'https://th.bing.com/th/id/OIP.Fp7sFol83az5vls4n9eWtwHaEo?pid=ImgDet&rs=1',
+        },
+        {
+          id: 2,
+          name: 'Travis Howard',
+          avatarSrc: 'https://th.bing.com/th/id/OIP.Fp7sFol83az5vls4n9eWtwHaEo?pid=ImgDet&rs=1',
+        },
+        {
+          id: 3,
+          name: 'Remy Sharp',
+          avatarSrc: 'https://th.bing.com/th/id/OIP.Fp7sFol83az5vls4n9eWtwHaEo?pid=ImgDet&rs=1',
+        },
+        {
+          id: 4,
+          name: 'Travis Howard',
+          avatarSrc: 'https://th.bing.com/th/id/OIP.Fp7sFol83az5vls4n9eWtwHaEo?pid=ImgDet&rs=1',
+        },
+      ],
+      PreferredVehicle: 'Van',
+      Package: 'Yes',
+      CBM: 1,
+      Purpose: 'Traning Session',
+      Approver: ' Yoshani Jayathilaka',
+      // Add more properties as per your requirements
+    },
+    {
+      id: 3,
+      requestId: '12345',
+      requestType: 'Transportation',
+      createDate: '2023-05-27',
+      status: 'Draft',
+      VIPtrip: 'No',
+      From: 'Biyagama',
+      To : 'Pallekele',
+      Departure: '20/04/2023 8.00 AM',
+      Return : '22/04/2023 8.00 PM',
+      Passengers: [
+        {
+          id: 1,
+          name: 'Remy Sharp',
+          avatarSrc: 'https://th.bing.com/th/id/OIP.Fp7sFol83az5vls4n9eWtwHaEo?pid=ImgDet&rs=1',
+        },
+        {
+          id: 2,
+          name: 'Travis Howard',
+          avatarSrc: 'https://th.bing.com/th/id/OIP.Fp7sFol83az5vls4n9eWtwHaEo?pid=ImgDet&rs=1',
+        },
+        {
+          id: 3,
+          name: 'Remy Sharp',
+          avatarSrc: 'https://th.bing.com/th/id/OIP.Fp7sFol83az5vls4n9eWtwHaEo?pid=ImgDet&rs=1',
+        },
+        {
+          id: 4,
+          name: 'Travis Howard',
+          avatarSrc: 'https://th.bing.com/th/id/OIP.Fp7sFol83az5vls4n9eWtwHaEo?pid=ImgDet&rs=1',
+        },
+      ],
+      PreferredVehicle: 'Van',
+      Package: 'Yes',
+      CBM: 1,
+      Purpose: 'Traning Session',
+      Approver: ' Yoshani Jayathilaka',
+      // Add more properties as per your requirements
+    },
+    {
+      id: 4,
       requestId: '12345',
       requestType: 'Transportation',
       createDate: '2023-05-27',
@@ -107,7 +176,7 @@ const ViewRequestsLM = () => {
       // Add more properties as per your requirements
     },
     {
-      id: 1,
+      id: 5,
       requestId: '12345',
       requestType: 'Transportation',
       createDate: '2023-05-27',
@@ -147,87 +216,7 @@ const ViewRequestsLM = () => {
       // Add more properties as per your requirements
     },
     {
-      id: 1,
-      requestId: '12345',
-      requestType: 'Transportation',
-      createDate: '2023-05-27',
-      status: 'Pending',
-      VIPtrip: 'No',
-      From: 'Biyagama',
-      To : 'Pallekele',
-      Departure: '20/04/2023 8.00 AM',
-      Return : '22/04/2023 8.00 PM',
-      Passengers: [
-        {
-          id: 1,
-          name: 'Remy Sharp',
-          avatarSrc: 'https://th.bing.com/th/id/OIP.Fp7sFol83az5vls4n9eWtwHaEo?pid=ImgDet&rs=1',
-        },
-        {
-          id: 2,
-          name: 'Travis Howard',
-          avatarSrc: 'https://th.bing.com/th/id/OIP.Fp7sFol83az5vls4n9eWtwHaEo?pid=ImgDet&rs=1',
-        },
-        {
-          id: 3,
-          name: 'Remy Sharp',
-          avatarSrc: 'https://th.bing.com/th/id/OIP.Fp7sFol83az5vls4n9eWtwHaEo?pid=ImgDet&rs=1',
-        },
-        {
-          id: 4,
-          name: 'Travis Howard',
-          avatarSrc: 'https://th.bing.com/th/id/OIP.Fp7sFol83az5vls4n9eWtwHaEo?pid=ImgDet&rs=1',
-        },
-      ],
-      PreferredVehicle: 'Van',
-      Package: 'Yes',
-      CBM: 1,
-      Purpose: 'Traning Session',
-      Approver: ' Yoshani Jayathilaka',
-      // Add more properties as per your requirements
-    },
-    {
-      id: 1,
-      requestId: '12345',
-      requestType: 'Transportation',
-      createDate: '2023-05-27',
-      status: 'Pending',
-      VIPtrip: 'No',
-      From: 'Biyagama',
-      To : 'Pallekele',
-      Departure: '20/04/2023 8.00 AM',
-      Return : '22/04/2023 8.00 PM',
-      Passengers: [
-        {
-          id: 1,
-          name: 'Remy Sharp',
-          avatarSrc: 'https://th.bing.com/th/id/OIP.Fp7sFol83az5vls4n9eWtwHaEo?pid=ImgDet&rs=1',
-        },
-        {
-          id: 2,
-          name: 'Travis Howard',
-          avatarSrc: 'https://th.bing.com/th/id/OIP.Fp7sFol83az5vls4n9eWtwHaEo?pid=ImgDet&rs=1',
-        },
-        {
-          id: 3,
-          name: 'Remy Sharp',
-          avatarSrc: 'https://th.bing.com/th/id/OIP.Fp7sFol83az5vls4n9eWtwHaEo?pid=ImgDet&rs=1',
-        },
-        {
-          id: 4,
-          name: 'Travis Howard',
-          avatarSrc: 'https://th.bing.com/th/id/OIP.Fp7sFol83az5vls4n9eWtwHaEo?pid=ImgDet&rs=1',
-        },
-      ],
-      PreferredVehicle: 'Van',
-      Package: 'Yes',
-      CBM: 1,
-      Purpose: 'Traning Session',
-      Approver: ' Yoshani Jayathilaka',
-      // Add more properties as per your requirements
-    },
-    {
-      id: 1,
+      id: 6,
       requestId: '12345',
       requestType: 'Transportation',
       createDate: '2023-05-27',
@@ -270,6 +259,8 @@ const ViewRequestsLM = () => {
 
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(5);
+  const [sortDirection, setSortDirection] = useState('asc');
+
 
   const handleDelete = (id: number) => {
     setRows((prevRows) => prevRows.filter((row) => row.id !== id));
@@ -285,6 +276,22 @@ const ViewRequestsLM = () => {
   };
 
   const emptyRows = rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
+
+  const handleRequestTypeSort = () => {
+    const newSortDirection = sortDirection === 'asc' ? 'desc' : 'asc';
+    setSortDirection(newSortDirection);
+  
+    const sortedRows = [...rows].sort((a, b) => {
+      if (newSortDirection === 'asc') {
+        return a.requestType.localeCompare(b.requestType);
+      } else {
+        return b.requestType.localeCompare(a.requestType);
+      }
+    });
+  
+    setRows(sortedRows);
+  };
+  
 
   return (
     <section className={style.gridContainer}>
@@ -307,10 +314,27 @@ const ViewRequestsLM = () => {
         <Table className={style.table}>
           <TableHead>
           <TableRow>
-              <StyledTableCell width={120}>Request ID</StyledTableCell>
-              <StyledTableCell width={120}>Request Type</StyledTableCell>
-              <StyledTableCell width={180}>Create date and time</StyledTableCell>
-              <StyledTableCell width={100}>Status</StyledTableCell>
+              <StyledTableCell width={120}>
+                
+                Request ID
+                
+                </StyledTableCell>
+              <StyledTableCell width={120}>
+      Request Type
+                </StyledTableCell>
+
+              <StyledTableCell width={180}>
+                
+                Create date and time
+                
+                </StyledTableCell>
+
+              <StyledTableCell width={100}><Tooltip title="Sort" placement="top" enterDelay={300}>
+        <IconButton onClick={handleRequestTypeSort}>
+          {sortDirection === 'asc' ? <ArrowUpwardIcon /> : <ArrowDownwardIcon />}
+        </IconButton>
+      </Tooltip>
+                Status</StyledTableCell>
               <StyledTableCell width={100} >VIP trip</StyledTableCell>
                   <StyledTableCell width={100} >From</StyledTableCell>
                   <StyledTableCell width={180} >To (Main Destination)</StyledTableCell>
