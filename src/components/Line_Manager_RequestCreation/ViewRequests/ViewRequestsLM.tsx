@@ -17,10 +17,10 @@ const ViewRequestsLM = () => {
   const [rows, setRows] = useState([
     {
       id: 1,
-      requestId: '12345',
-      requestType: 'Adhoc',
+      requestId: '1',
+      requestType: 'Adhoc1',
       createDate: '2023-05-27',
-      status: 'Pending',
+      status: 'Pending1',
       VIPtrip: 'No',
       From: 'Biyagama',
       To : 'Pallekele',
@@ -57,10 +57,10 @@ const ViewRequestsLM = () => {
     },
     {
       id: 2,
-      requestId: '12345',
-      requestType: 'Adhoc',
+      requestId: '2',
+      requestType: 'Adhoc2',
       createDate: '2023-05-27',
-      status: 'Pending',
+      status: 'Pending2',
       VIPtrip: 'No',
       From: 'Biyagama',
       To : 'Pallekele',
@@ -97,10 +97,10 @@ const ViewRequestsLM = () => {
     },
     {
       id: 3,
-      requestId: '12345',
-      requestType: 'Transportation',
+      requestId: '3',
+      requestType: 'Transportation3',
       createDate: '2023-05-27',
-      status: 'Draft',
+      status: 'Draft3',
       VIPtrip: 'No',
       From: 'Biyagama',
       To : 'Pallekele',
@@ -137,10 +137,10 @@ const ViewRequestsLM = () => {
     },
     {
       id: 4,
-      requestId: '12345',
-      requestType: 'Transportation',
+      requestId: '4',
+      requestType: 'Transportation4',
       createDate: '2023-05-27',
-      status: 'Pending',
+      status: 'Pending4',
       VIPtrip: 'No',
       From: 'Biyagama',
       To : 'Pallekele',
@@ -177,10 +177,10 @@ const ViewRequestsLM = () => {
     },
     {
       id: 5,
-      requestId: '12345',
-      requestType: 'Transportation',
+      requestId: '5',
+      requestType: 'Transportation5',
       createDate: '2023-05-27',
-      status: 'Pending',
+      status: 'Pending5',
       VIPtrip: 'No',
       From: 'Biyagama',
       To : 'Pallekele',
@@ -217,10 +217,10 @@ const ViewRequestsLM = () => {
     },
     {
       id: 6,
-      requestId: '12345',
-      requestType: 'Transportation',
+      requestId: '6',
+      requestType: 'Transportation6',
       createDate: '2023-05-27',
-      status: 'Pending',
+      status: 'Pending6',
       VIPtrip: 'No',
       From: 'Biyagama',
       To : 'Pallekele',
@@ -413,14 +413,17 @@ const ViewRequestsLM = () => {
             ))}
 
             {emptyRows > 0 && (
-              <TableRow style={{ height: 53 * emptyRows }} className={style.paginationReq}>
+              <TableRow style={{ height: 43 * emptyRows }} className={style.paginationReq}>
                 <TableCell colSpan={15} />
               </TableRow>
             )}
           </TableBody>
         </Table>
 
-        <TablePagination className={style.paginationReq}
+        
+      </TableContainer>
+
+      <TablePagination className={style.paginationReq}
           rowsPerPageOptions={[5, 10, 25]}
           component="div"
           count={rows.length}
@@ -429,7 +432,6 @@ const ViewRequestsLM = () => {
           onPageChange={handleChangePage}
           onRowsPerPageChange={handleChangeRowsPerPage}
         />
-      </TableContainer>
     </section>
   );
 };
