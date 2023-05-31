@@ -18,7 +18,7 @@ const ViewRequestsLM = () => {
     {
       id: 1,
       requestId: '1',
-      requestType: 'Adhoc1',
+      requestType: 'Adhoc2',
       createDate: '2023-05-27',
       status: 'Pending1',
       VIPtrip: 'No',
@@ -58,7 +58,7 @@ const ViewRequestsLM = () => {
     {
       id: 2,
       requestId: '2',
-      requestType: 'Adhoc2',
+      requestType: 'Adhoc',
       createDate: '2023-05-27',
       status: 'Pending2',
       VIPtrip: 'No',
@@ -314,12 +314,20 @@ const ViewRequestsLM = () => {
         <Table className={style.table}>
           <TableHead>
           <TableRow>
-              <StyledTableCell width={120}>
+              <StyledTableCell width={120}><Tooltip title="Sort" placement="top" enterDelay={300}>
+        <IconButton onClick={handleRequestTypeSort}>
+          {sortDirection === 'asc' ? <ArrowUpwardIcon /> : <ArrowDownwardIcon />}
+        </IconButton>
+      </Tooltip>
                 
                 Request ID
                 
                 </StyledTableCell>
-              <StyledTableCell width={120}>
+              <StyledTableCell width={120}><Tooltip title="Sort" placement="top" enterDelay={300}>
+        <IconButton onClick={handleRequestTypeSort}>
+          {sortDirection === 'asc' ? <ArrowUpwardIcon /> : <ArrowDownwardIcon />}
+        </IconButton>
+      </Tooltip>
       Request Type
                 </StyledTableCell>
 
